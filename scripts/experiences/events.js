@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Event from '../components/Event';
+
 export default class Events extends React.Component {
   constructor(props) {
     super(props);
@@ -13,15 +15,18 @@ export default class Events extends React.Component {
     });
   }
   render() {
+    const events = this.props.events.map((event, idx) => {
+      return <Event key={idx} config={event} content={this.props.content} />
+    })
     return (
       <div
         class={[
           "5b",
-          "events",
-          this.state.ready ? 'ready' : 'loading'
+          "events"
         ].join(' ')}
-        ref={(component) => {this.events = component}}
+        ref={(experience) => {this.events = experience}}
       >
+      {events}
       </div>
     );
   }

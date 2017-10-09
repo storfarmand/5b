@@ -75,8 +75,8 @@ module.exports = {
           },
         ],
     },
-    devtool: 'inline-source-map',
+    devtool: 'hidden-source-map',
     plugins: [
-      //new webpack.optimize.OccurrenceOrderPlugin()
+      new webpack.optimize.OccurrenceOrderPlugin()
     ]
 };

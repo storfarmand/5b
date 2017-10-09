@@ -1,5 +1,6 @@
 import constants from './constants';
 import content from './content';
+import events from './events';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,5 +15,6 @@ ReactDOM.render(
   <Events
     constants={constants}
     content={content}
+    events={events}
   />,
 app);
